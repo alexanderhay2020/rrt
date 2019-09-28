@@ -40,18 +40,20 @@ while i<10:
     print foodx, foody
     #print foody
     tree[i]=[spotx,spoty]
-    foodlist[i]=[foodx,foody]
+    foodlist[i]=(foodx,foody)
 
     i=i+1
 
 #print(tree)
-#print(foodlist)
+print(foodlist)
 
 plt.xlim(0,100) # sets x axis range
 plt.ylim(0,100) # sets y axis range
 plt.grid()
 #plt.plot(domain)
 #plt.plot(spotx,spoty,'bx')
-plt.plot(foodlist[:],'bo')
-plt.plot(tree[:],'bx') #fixed
+index=0
+while index<len(foodlist):
+    plt.scatter(foodlist(index),'bo')
+#plt.plot(tree[:],'bx')
 plt.show()
